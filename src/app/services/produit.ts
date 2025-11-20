@@ -12,7 +12,7 @@ headers: new HttpHeaders( {'Content-Type': 'application/json'} )
   providedIn: 'root'
 })
 export class ProduitService {
-   apiURL: string = 'http://localhost:8090/produits/api';
+   apiURL: string = 'http://localhost:8000/produits/api';
 
   categories!: Categorie[];
   produits: Produit[]=[];

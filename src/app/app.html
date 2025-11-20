@@ -29,7 +29,9 @@
             Produits
           </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            @if(authService.isAdminUser()) {
             <li><a class="dropdown-item" routerLink="/add-produit">Ajouter</a></li>
+            }
             <li><a class="dropdown-item" routerLink="/produits">Lister</a></li>
           </ul>
         </li>
@@ -40,10 +42,10 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
              role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            [username]
+            [{{authService.loggedUser}}]
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Login</a></li>
+            <li><a class="dropdown-item" routerLink="/login">Login</a></li>
             <li><a class="dropdown-item" href="#">Logout</a></li>
             <li><a class="dropdown-item" href="#">Profile</a></li>
           </ul>
